@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<section>
+      <!-- main content area -->
+	{% for post in posts %}
+    <article id="box">
+		<header class="post-title">
+			<a href="/posts/{{ post.slug }}">{{ post.title }}</a>
+		</header>
+		<p style="font-style: italic;">posted on {{ post.date.__str__() }}</p>
+		<hr class="divider">
+		{% if post.summary %}
+		    {{ post.summary|markdown|safe }} 
+		     <a href="/post/{{ post.slug }}"><br>
+		     <p style="font-size: 26px; margin: 2px;float: right">
+		     . . . continue reading</p></a>
+		{% else %}
+		    {{ post.body | markdown | safe }}
+		{% endif %}
+    </article>
+    {% endfor %}
+
+</section>
+
+{% endblock %}    
+    

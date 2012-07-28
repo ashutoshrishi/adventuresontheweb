@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+
+<article id="box">
+<form action="{{ url_for('do_post') }}" method="POST">
+          <div class="formstyle">
+            <h1>WRITE POST :</h1>
+           
+              Title: <br>
+               <input type="text" class="input_text" name="title" id="title" size="70">
+            <br>
+             
+               Content:<br>
+               <textarea class="contentarea" cols="70" rows="10" name="content"></textarea>
+                <br>
+                <input type="submit" class="button" value="Post" />          
+            
+         </div>
+    </form>
+<br><br>
+</article>
+
+{% endblock %}

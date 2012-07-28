@@ -1,0 +1,301 @@
+@import url(http://fonts.googleapis.com/css?family=Capriola);
+
+* {margin:0;padding:0;} 
+
+* {   border: none; }
+
+header, footer, aside, nav, article {
+    display: block;
+}
+
+html, body {height: 100%;}
+
+a {
+    color: #111111;
+}
+
+a:hover {
+    color: #555555;
+    text-decoration: none;
+}
+
+body {
+    margin: 0 auto;
+    font: 13px/22px Ubuntu, Helvetiva, Arial, sans-serif;
+    background-color: rgba(68, 68, 68, 1)
+
+}
+
+
+
+#wrapper {min-height: 100%;}
+
+
+body:before 
+{ 
+   content: "";
+   position: fixed;
+   top: -10px;
+   left: 0;
+   width: 100%;
+   height: 10px;
+   z-index: 100;
+   -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+   -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+   box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+}
+
+.title {
+    background-color: #3d3d3d;
+    color: #fff;
+    margin: 0;
+    left: 0;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    margin-right: 20px;
+    z-index: 100;
+   -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+   -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+    background-attachment: fixed;
+}
+
+nav {
+    width: 100%;
+    height: 40px;
+    color: #eee;
+    background-color: #2c2c2c;
+    text-align: center;
+    -webkit-box-shadow: inset 0px 2px 10px rgba(17,17,17,.4),inset 0px -2px 10px rgba(17,17,17,.4);
+    -moz-box-shadow:    inset 0px 2px 10px rgba(17,17,17,.4),inset 0px -2px 10px rgba(17,17, 17, .4);
+    box-shadow:         inset 0px 2px 10px rgba(17,17,17,.4),inset 0px -2px 10px rgba(17,17,17,.4);
+    letter-spacing: 3px;
+
+}
+
+nav ul {
+    margin: 0 auto;
+    width: 800px;
+    list-stye: none;
+    text-align: center;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    color: #ddd;
+}
+
+
+nav ul li a {
+    display: block;  
+    margin-right: 20px;  
+    width: 140px;  
+    font-size: 14px;  
+    line-height: 44px;  
+    text-align: center;  
+    text-decoration: none; 
+    color: #ddd;
+}
+
+nav ul li a:hover {  
+    color: #336699;  
+}  
+ 
+nav ul li.selected a {  
+    color: #fff;  
+}
+
+
+
+#box 
+{
+  position: relative;
+  width: 800px;
+  background: #ddd;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 1em 1.5em;
+  color: rgba(37, 37, 37, .8);
+  text-shadow: 0 1px 0 #fff;
+  margin: 60px auto;
+  font-size: 1em;
+  padding-bottom: 50px;
+}
+
+#box h1 {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    margin: 1em 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#box li {
+    margin-left: 20px;
+}
+
+#box h2, h3, h4, h5, h6 {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    margin: 1em 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+#box:before, #box:after 
+{
+  z-index: -1; 
+  position: absolute; 
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%; 
+  top: 80%;
+  max-width:300px;
+  background: rgba(0, 0, 0, 0.7); 
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);   
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);    
+  -moz-transform: rotate(-3deg);   
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+
+#box:after 
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+#content {
+    display: table;
+    padding-top: 20px;
+        overflow:auto;
+	padding-bottom: 50px;
+	width: 900px;
+	margin: auto;
+
+}
+
+#mainContent {
+    display: table-cell;
+    width: 800px;
+
+}
+
+#footer {
+    position: relative;
+	margin-top: -50px; /* negative value of footer height */
+	height: 50px;
+	clear:both;
+	background-color: #3d3d3d;
+	color: #eee;
+	padding: 10px;
+	  text-shadow: 0 1px 0 #000;
+	   -webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,.8);
+   -moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,.8);
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,.8);
+} 
+
+#messagebox {
+    width: 500px;
+    background-color: #252525;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30em;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+    text-shadow: 0 1px 0 #000;
+    margin-left: 250px;
+    list-style: none;
+}
+
+.blogpost {
+    background-color: #eee;
+}
+
+label { float: left; text-align: right; margin-right: 15px; width: 100px; }
+
+.input_text {
+    height: 20px;
+    border: 2px solid #bbb;
+    margin: 2px auto;
+    background: #f0f0f0;
+     -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.contentarea {
+    border: 2px solid #bbb;
+    margin: 2px auto;
+    background: #f0f0f0;
+     -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+
+}
+
+.button {
+    padding: 10px;
+    width: 80px;
+    color: #eee;
+    border: 1px solid #bbb;
+      -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
+    margin-top: 10px;
+    background: #111;
+}
+
+.post-title {
+    font-size: 32px;
+    margin: .5em 0 .25em 0;
+    color:  #000;
+    font-family: 'Capriola', sans-serif;
+}
+
+.post-title a {
+    font-size: 32px;
+    margin: .5em 0 .25em 0;
+    color:  rgba(68, 68, 68, 1);
+    font-family: 'Capriola', sans-serif;
+    text-decoration: none;
+}
+
+
+.post-title a:hover {
+    font-size: 32px;
+    margin: .5em 0 .25em 0;
+    color:  #555555;
+    font-family: 'Capriola', sans-serif;
+    text-decoration: none;
+}
+
+hr.divider {
+    border: 1px solid rgba(37, 37, 37, .8);
+    width: 100%;
+    margin-top: 1em;
+    box-shadow: 0 1px 0 #fff;
+}
+
+.codehilite {
+    padding: 10px;
+}
+

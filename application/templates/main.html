@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Adventures on the Web</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',
+                            filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',
+                            filename='code.css') }}">
+  </head>
+<body>
+
+<div id="wrapper">
+
+    <header class="title"><center>
+      <img src="{{ url_for('static',
+                            filename='banner.png') }}" >
+        </center>
+    </header>
+
+    <nav>
+      <!--Navigation-->
+      <ul>
+        <LI><A HREF="{{ url_for('show_index') }}">HOME</A></LI>
+        <LI><A HREF="#">PROJECTS</A></LI>
+        <LI><A HREF="#">ARCHIVE</A></LI>
+        <LI><A HREF="#">ABOUT</A></LI>
+        <LI><A HREF="#">CONTACT</A></LI>
+        
+      </ul>
+    </nav>
+
+
+
+<div id="content">
+
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul id="messagebox">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+   {% endwith %}
+   
+    <div id="maincontent">
+ 
+        <!-- main content area -->
+        {% block content %}{% endblock %}
+ 
+    
+    </div>
+</div>
+</div>
+    <div id="footer">
+         <img src="{{ url_for('static',
+                            filename='arr.png') }}" >
+      <p style="float: right;padding-top: 15px">The real Batman is Deep Pancholi<p>
+    </div>
+
+  </body>
+</html>

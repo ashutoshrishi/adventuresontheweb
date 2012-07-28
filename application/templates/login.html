@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+
+{% if error %}
+<div id="messagebox">{{ error }}</div>
+{% endif %}
+
+<article id="box">
+<form action="{{ url_for('do_login') }}" method="POST">
+          <div class="formstyle">
+            <h1>LOGIN :</h1>
+            <label>
+               <span>Username</span></label>
+               <input type="text" class="input_text" name="username" id="username"/>
+            <br>
+             <label>
+               <span>Password</span></label>
+               <input type="password" class="input_text" name="password" id="password"/>
+                <br>
+                <input type="submit" class="button" value="Login" />
+            
+            
+            
+         </div>
+    </form>
+<br><br>
+</article>
+
+{% endblock %}

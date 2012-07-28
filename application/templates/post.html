@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<section>
+      <!-- main content area -->
+    <article id="box">
+		<header class="post-title">
+			<a href="/posts/{{ post.slug }}">{{ post.title }}</a>
+		</header>
+		<p style="font-style: italic;">posted on {{ post.date.__str__() }}</p>
+		<hr class="divider">
+		{{ post.body|markdown|safe }}
+    </article>
+
+
+</section>
+
+{% endblock %}    
+    
