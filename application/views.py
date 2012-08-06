@@ -31,6 +31,10 @@ def show_post(slug):
             return render_template("post.html", post = article)
     return abort(404)
 
+@app.route('/posts/', methods=['GET'])
+def show_archive():
+    return render_template("archive_posts.html")
+
 @app.route('/posts/<int:year>/', methods=['GET'])
 def show_post_year(year):
     """
@@ -40,7 +44,7 @@ def show_post_year(year):
     for article in ARTICLES:
         if article['date'].year == year:
             matched.append(article)
-    return render_template("archive_posts.html", matched = matched)
+    return render_template("archive_posts_year.html", matched = matched)
 
 @app.route('/posts/<int:year>/<int:month>/', methods=['GET'])
 def show_post_year_month(year, month):
@@ -53,6 +57,10 @@ def show_post_year_month(year, month):
             if article['date'].month == month:
                 matched.append(article)    
     return render_template("archive_posts.html", matched = matched)
+
+@app.route('/archive/', methods=['GET'])
+def show_archive():
+    return render_template("archive.html")
 
 
 @app.errorhandler(404)

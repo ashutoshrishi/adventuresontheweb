@@ -5,11 +5,30 @@
 <section>
       <!-- main content area -->
     <article id="box">
-		<header class="post-title">
+
+	<header class="post-title">
 			<a href="/posts/{{ post.slug }}">{{ post.title }}</a>
-		</header>
-		<p style="font-style: italic;">posted on {{ post.date.__str__() }}</p>
+                </header>
+		<div class="date">
+                  POSTED ON {{ post.date.__str__() }}
+                </div>
 		<hr class="divider">
+                <span class="post-links">
+
+                <ul style="margin: 0px">
+                  <li>COMMENTS: 0   </li>
+                  
+                  <li>SHARE VIA TWITTER</li>
+                  <li>SHARE VIA FACEBOOK</li>
+                  <li  class="rating">
+                          <span> &#9734; </span> 
+                  </li >
+                </ul>
+                </span>
+                
+
+
+		<hr class="divider"><br >
 		{{ post.body|markdown|safe }}
     </article>
 

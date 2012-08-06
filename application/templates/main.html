@@ -6,6 +6,18 @@
                             filename='style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static',
                             filename='code.css') }}">
+
+<script type="text/javascript" src="{{ url_for('static',
+                                    filename='jquery.js') }}">
+</script>
+
+
+
+<script type="text/javascript" src="{{ url_for('static',
+                                    filename='extensions.js') }}">
+</script>
+
+
   </head>
 <body>
 
@@ -34,6 +46,9 @@
 <div id="content">
 
 
+<!-- <p class="introduction"> -->
+<!-- HI, I AM ASHUTOSH RISHI RANJAN. I LEARN. -->
+<!-- </p> -->
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul id="messagebox">

@@ -8,16 +8,32 @@
     <article id="box">
 		<header class="post-title">
 			<a href="/posts/{{ post.slug }}">{{ post.title }}</a>
-		</header>
-		<p style="font-style: italic;">posted on {{ post.date.__str__() }}</p>
+                </header>
+		<div class="date">
+                  POSTED ON {{ post.date.__str__() }}
+                </div>
 		<hr class="divider">
+                <span class="post-links">
+
+                <ul style="margin: 0px">
+                  <li>COMMENTS: 0   </li>
+                  
+                  <li>SHARE VIA TWITTER</li>
+                  <li>SHARE VIA FACEBOOK</li>
+                  <li  class="rating">
+                          <span> &#9734; </span> 
+                  </li >
+                </ul>
+                </span>
+                
+                <hr class="divider">
 		{% if post.summary %}
-		    {{ post.summary|markdown|safe }} 
+		    <p>{{ post.summary|markdown|safe }}</p> 
 		     <a href="/post/{{ post.slug }}"><br>
 		     <p style="font-size: 26px; margin: 2px;float: right">
 		     . . . continue reading</p></a>
 		{% else %}
-		    {{ post.body | markdown | safe }}
+		    <p>{{ post.body | markdown | safe }}</p>
 		{% endif %}
     </article>
     {% endfor %}

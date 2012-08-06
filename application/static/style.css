@@ -180,6 +180,12 @@ nav ul li.selected a {
   left: auto;
 }
 
+#box p {
+    font-size: 1.2em;
+    font-family: Ubuntu, Helvetica, sans-serif ;
+    padding: 0 0 1em;
+}
+
 #content {
     display: table;
     padding-top: 20px;
@@ -266,7 +272,7 @@ label { float: left; text-align: right; margin-right: 15px; width: 100px; }
 
 .post-title {
     font-size: 32px;
-    margin: .5em 0 .25em 0;
+    margin: .5em 0 0 0;
     color:  #000;
     font-family: 'Capriola', sans-serif;
 }
@@ -288,10 +294,9 @@ label { float: left; text-align: right; margin-right: 15px; width: 100px; }
     text-decoration: none;
 }
 
-hr.divider {
+.divider {
     border: 1px solid rgba(37, 37, 37, .8);
     width: 100%;
-    margin-top: 1em;
     box-shadow: 0 1px 0 #fff;
 }
 
@@ -299,3 +304,51 @@ hr.divider {
     padding: 10px;
 }
 
+#months {
+    padding: 20px;
+    height: 50px;
+    background-color: #111111;
+}
+
+#show_months {
+    display: none;
+}
+
+.introduction {
+    text-align: center;
+    font-size: 1em;
+    color: #ccc;
+    letter-spacing: 2px;
+}
+
+.rating > span {
+    display: inline;
+    width: 1.1em;
+    float: right;
+    font-size: 2em;
+    color: rgba(37, 37, 37, 1);
+    margin-right: 0px;
+}
+
+.rating > span:hover:before {
+    content: "\2605";
+    position: absolute;
+}
+
+.post-links li {
+    letter-spacing: 2px;
+    font-size: 0.75em;
+    background-color: rgba(37, 37, 37, .8);
+    color: #fff;
+    text-shadow: 1px 0 rgba(37,37,37,.8);
+    display: inline;
+    list-style: none;
+    margin-left: 0px;
+    padding: 2px 8px 2px 8px;
+
+}
+
+.date {
+    letter-spacing: 2px;
+    font-size: 11px;
+}
