@@ -36,7 +36,10 @@ def get_articles():
     for file in sorted_listing('application/articles/'):
             with open(file, 'r') as f:
                 article = yaml.load(f.read())
-                article['slug'] = slugify(article["title"])
+
+                # posts can provide a slug of their own
+                if not hasattr(article, 'slug'):
+                    article['slug'] = slugify(article["title"])
                 
                 # Make a summary is the article is too long
                 if len(article['body']) > 4000:

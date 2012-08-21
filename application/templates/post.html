@@ -17,22 +17,83 @@
 
                 <ul style="margin: 0px">
                   <li>COMMENTS: 0   </li>
-                  
-                  <li>SHARE VIA TWITTER</li>
-                  <li>SHARE VIA FACEBOOK</li>
+                 <li> 
+                   <a href="https://twitter.com/share?url=http%3A%2F%2Fadventures.ashutoshrishiranjan.com%2Fposts%2F{{
+                            post.slug }}&via=ashutoshrishi&text={{ post.title }}"
+                      target="_blank">
+                 TWEET POST
+                 </a></li>
+
+
+                  <!-- <li>SHARE VIA FACEBOOK</li> -->
+
                   <li  class="rating">
-                          <span> &#9734; </span> 
+                    <span> &#9734; </span> 
                   </li >
+
                 </ul>
                 </span>
                 
-
-
-		<hr class="divider"><br >
+                <hr class="divider">
+	
+<br >
 		{{ post.body|markdown|safe }}
+
     </article>
 
+<div class="comments-section">
 
+
+<h1>Comments : </h1>
+{% if comments %}
+<ul class="comments-display">
+{% for comment in comments %}
+  <li>
+    <span>
+      <p id="comment-author">{{ comment.author }}</p>
+      <p id="comment-body">
+        {{ comment.body }}
+    </p>
+    </span>
+  </li>
+{% endfor %}
+</ul>
+{% else %}
+No comments to display here
+{% endif %}
+
+<br><br>
+<h1>Post A Comment: </h1><br>
+<!-- <form method="POST" action="{{ url_for('post_comment') }}"> -->
+<!--   Name:<br>  -->
+<!--   <input type="text" name="name" size="50"><br> -->
+<!--   Email: <br> -->
+<!--   <input type="text" name="email" size="50"><br> -->
+<!--   Comment: <br> -->
+<!--   <textarea rows="5" cols="50" name="body"></textarea><br> -->
+<!--   <input type="hidden" name="slug" value="{{ post.slug }}"> -->
+<!--   <input type="submit" value="POST" id="submit"> -->
+<!-- </form> -->
+
+{% from "_formhelpers.html" import render_field %}
+<form method=post action="/post-comment">
+  <dl>
+    {{ render_field(form.name) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.comment, rows="10", cols="50") }}
+    {{ render_field(form.slug, value=post.slug) }}
+  
+  <dd><input type=submit value='Comment' id="submit"></dd>
+  </dl>
+</form>
+
+<br><br>
+
+
+
+
+</div>
+<br>
 </section>
 
 {% endblock %}    

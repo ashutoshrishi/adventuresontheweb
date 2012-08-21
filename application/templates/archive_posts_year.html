@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<section>
+      <!-- main content area -->
+
+    <article id="box">
+            {% if not matched %}
+                <p>No matching posts</p>
+            {% endif %}
+                <ol>
+                {% for post in matched %}
+                
+	        <h1> <a href="/posts/{{ post.slug }}"><li>{{ post.title }}</li></a>
+	           </h1>   
+                {% endfor %}
+                </ol>              
+    </article>
+
+
+</section>
+
+{% endblock %}    
+
