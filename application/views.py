@@ -81,7 +81,8 @@ def show_post_year_month(year, month):
 
 @app.route('/archive/', methods=['GET'])
 def show_archive():
-    return render_template("archive.html")
+    archive = [(a['title'], a['slug'], a['date']) for a in ARTICLES]
+    return render_template("archive.html", archive = archive)
 
 
 @app.errorhandler(404)
