@@ -64,4 +64,4 @@ def slugify(url):
     """
     return re.sub(r'-$', '', re.sub(r'[^A-Za-z0-9\-]+', '-', url.lower()))
                 
-                
+    
