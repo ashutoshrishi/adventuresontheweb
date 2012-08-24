@@ -15,6 +15,10 @@ ARTICLES_DIR = app.config['ARTICLES_DIR']
 
 md = Markdown(app, extensions = ['codehilite'])
 
+@app.route('/test')
+def bootstrap():
+    return render_template("bootstrap/main.html")
+
 @app.route('/')
 def show_index():
     """
