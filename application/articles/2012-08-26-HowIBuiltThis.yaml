@@ -1,0 +1,70 @@
+title: 'How I Built This Blog.'
+date: Sat Aug 25 16:48:11 IST 2012
+body: |
+    This is just a short brief on all the amazing technologies I used to
+    develop this blog. In a way, this was a learning process for me as the
+    main aim of making this blog was to learn to use these tools.
+    
+    The base was *Python*. I love Python. This is the first web application that
+    I have completed in Python and I am really happy with the
+    choice. The numberous frameworks available makes choosing the right one
+    really difficult. But at the end, It really comes down to a personal choice.
+    For this blog, I chose the framework 'Flask'.
+
+    ###Flask###
+    
+    [Flask](http://flask.pocoo.org/) is a lightweight *micro* framework. And that's exactly what
+    I needed. It is easy to use, I write everything in python, and
+    there is not much of *learning the framework*. For a minimal web
+    application, intended of learning concepts, Flask was the choice.
+
+    Flask does not do a lot for you, unlike full featured frameworks
+    like *Django* and *Web2py*, but it lets you do a lot. I might have
+    chosen flask because of its simplicity and the scope of my
+    project, but I am sure I will not hesitate to use it in bigger
+    projects in the future. After all, you never let go of a framework
+    you spent so much time on.
+
+    It really feels like you wrote a web application from scratch, and
+    that is a good thing.
+
+    ###Markdown###
+    
+    All my posts are written in
+    [Markdown](http://daringfireball.net/projects/markdown/) and
+    stored in plain text files instead of databases. It provides a lot
+    of flexibility and rich content. I can even sync these files
+    through Dropbox. It works for me, as I can incorporate them in my
+    work flow. Also, I love plain files. 
+    
+    However, it does come with a performance loss when compared to
+    databases, but for a minimal blog like this, it really does not
+    show.
+    The other problem I faced was accepting comments on these
+    posts. They are not stored on databases, hence I could not link
+    comments to a post the usual way. Instead, I started indexing
+    posts slugs (URI) in a database for comments. It works.
+    
+    ###Twitter Bootstrap###
+    
+    I re-wrote the html and css for the blog to use
+    [Bootstrap](http://twitter.github.com/bootstrap/). And I will use
+    it in every single future project. It is simply one of the most
+    useful projects ever. Probably addicting.
+    
+    ###Google App Engine###
+    
+    When I started making websites, I used free hosts like
+    www.t35.com. It was a mess, but I stuck with it because I could
+    not afford full hosting. Developing free web applications on
+    platforms such as Google App Engine has been a blessing compared
+    to that. 
+      
+    <hr>
+  
+    There is still a whole lot of work left to do. But that will
+    happen eventually. I have synced this project on my [github](https://github.com/ashutoshrishi/adventuresontheweb) 
+    The code might be a little messy, but I am tidying up quickly. 
+    
+    Now, onto a bigger project. 
+    

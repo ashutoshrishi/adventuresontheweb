@@ -91,3 +91,10 @@ body {
 .page-header {
     border-bottom: 1px solid #415A66;
 }
+
+footer {
+    background: #001520;
+    height: 50px;
+    padding: 5px;
+    color: #fff;
+}
