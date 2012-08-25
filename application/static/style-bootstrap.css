@@ -1,17 +1,30 @@
-@import url(http://fonts.googleapis.com/css?family=Capriola);
+
+
+body {
+    background-color: #415A66;
+}
+#box p a {
+    color: #415A66;
+}
+
+#box h2 a {
+    color: #415A66;
+}
 
 #box p a:hover {
-    color: #08C;
+    color: #415A66;
 }
+
+
 
 #box 
 {
   position: relative;
-  background: #242424;
+  background: white;
   -moz-border-radius: 4px;
   border-radius: 4px;
   padding: 1em 2em;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(43, 43, 43, 1);
   /* text-shadow: 0 1px 0 #fff; */
   padding-bottom: 50px;
   padding-right: 1em;
@@ -52,14 +65,14 @@
 }
 
 .page-header a {
-    color: rgba(255, 255, 255, 1)
+    color: #415A66;
 }
 
-.label-info a {
+.label a {
     color: #fff;
 }
 
-.label-info a:hover {
+.label a:hover {
     color: #fff;
 }
 
@@ -74,3 +87,7 @@
 .well {
     color: #333;
  }
+
+.page-header {
+    border-bottom: 1px solid #415A66;
+}
