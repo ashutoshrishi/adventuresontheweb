@@ -92,9 +92,18 @@ body {
     border-bottom: 1px solid #415A66;
 }
 
-footer {
-    background: #001520;
-    height: 50px;
-    padding: 5px;
-    color: #fff;
+body,html{
+ height:100%;
+}
+
+.container{
+ min-height:100%;
+}
+
+footer{
+ height:50px;
+ margin-top:-50px;
+ background: #001520;
+ padding: 5px;
+ color: #fff;
 }

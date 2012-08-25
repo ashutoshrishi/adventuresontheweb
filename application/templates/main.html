@@ -19,9 +19,10 @@
   </head>
 
 <body>
-<a href="https://github.com/ashutoshrishi"><img style="position: absolute; top:
-                                             0; right: 0; border: 0;z-index:100"
-                                      src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+<a href="https://github.com/ashutoshrishi">
+<img style="position: absolute; top: 0; right: 0; border:
+                                      0;z-index:100"
+     src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
                                       alt="Fork me on GitHub"></a>
 
     <div style="background-color:#415A66;text-align:center">
@@ -33,7 +34,7 @@
       <div class="navbar-inner">
       <!--Navigation-->
       <ul class="nav">
-        <LI class="active"><A HREF="{{ url_for('show_index') }}">Home</A></LI>
+        <LI><A HREF="{{ url_for('show_index') }}">Home</A></LI>
         <LI><A HREF="#">Projects</A></LI>
         <LI><A HREF="{{ url_for('show_archive') }}">Archive</A></LI>
         <LI><A HREF="#">About</A></LI>
@@ -68,13 +69,15 @@
 </div>
 </div>
 </div>
-
+<br><br>
 <footer>
   <img src="{{ url_for('static', filename='arr.png') }}">
 
   <p class="pull-right">
-    <br>
-    Made using Flask, Bootstrap.
+    <a href="http://twitter.com/ashutoshrishi">
+    <img src="{{ url_for('static',
+              filename='twitter-bird-dark-bgs.png') }}" width="50px"
+              height="50px"></a>
   </p>
 
 </footer>
