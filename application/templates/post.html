@@ -2,44 +2,31 @@
 
 {% block content %}
 
-<section>
-      <!-- main content area -->
-    <article id="box">
+<article id="box">
 
-	<header class="post-title">
-			<a href="/posts/{{ post.slug }}">{{ post.title }}</a>
-                </header>
-		<div class="date">
-                  POSTED ON {{ post.date.__str__() }}
-                </div>
-		<hr class="divider">
-                <span class="post-links">
-
-                <ul style="margin: 0px">
-                  <li>COMMENTS: 0   </li>
-                 <li> 
-                   <a href="https://twitter.com/share?url=http%3A%2F%2Fadventures.ashutoshrishiranjan.com%2Fposts%2F{{
-                            post.slug }}&via=ashutoshrishi&text={{ post.title }}"
+<div class="page-header">
+<h1><a href="/posts/{{ post.slug }}">{{ post.title }}</a>
+<small>posted on {{ post.date.__str__() }}</small></h1>
+<span class="label">Comments: 10</span>
+<span class="label">
+<a href="https://twitter.com/share?url=http%3A%2F%2Fadventures.ashutoshrishiranjan.com%2Fposts%2F{{
+                            post.slug }}&via=ashutoshrishi&text={{
+                            post.title }}"
                       target="_blank">
-                 TWEET POST
-                 </a></li>
+  Share on Twitter</a></span>
+</div>
 
 
-                  <!-- <li>SHARE VIA FACEBOOK</li> -->
-
-                  <li  class="rating">
-                    <span> &#9734; </span> 
-                  </li >
-
-                </ul>
-                </span>
-                
-                <hr class="divider">
-	
-<br >
-		{{ post.body|markdown|safe }}
-
-    </article>
+	        {% if post.summary %}
+		    <p>{{ post.summary|markdown|safe }}</p> 
+		     <a href="/post/{{ post.slug }}"><br>
+		     <small>
+		     . . . continue reading</small></a>
+		{% else %}
+		    <p>{{ post.body | markdown | safe }}</p>
+		{% endif %}
+          
+</article>
 
 <div class="comments-section">
 
@@ -94,7 +81,7 @@ No comments to display here
 
 </div>
 <br>
-</section>
+
 
 {% endblock %}    
     
