@@ -62,3 +62,15 @@
 .label-info a:hover {
     color: #fff;
 }
+
+.comments-section {
+    color: #fff;
+}
+
+.comments-section legend {
+    color: #fff;
+}
+
+.well {
+    color: #333;
+ }

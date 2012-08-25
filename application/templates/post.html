@@ -27,51 +27,52 @@
 		{% endif %}
           
 </article>
-
+<br><br>
 <div class="comments-section">
 
 
 <h1>Comments : </h1>
 {% if comments %}
-<ul class="comments-display">
+
 {% for comment in comments %}
-  <li>
-    <span>
-      <p id="comment-author">{{ comment.author }}</p>
-      <p id="comment-body">
-        {{ comment.body }}
-    </p>
-    </span>
-  </li>
+
+<div class="well well-small">
+<span class="label">{{ comment.author }}</span>
+  <p>{{ comment.body }}</p>
+</div>
 {% endfor %}
-</ul>
+
 {% else %}
 No comments to display here
 {% endif %}
 
-<br><br>
-<h1>Post A Comment: </h1><br>
-<!-- <form method="POST" action="{{ url_for('post_comment') }}"> -->
-<!--   Name:<br>  -->
-<!--   <input type="text" name="name" size="50"><br> -->
-<!--   Email: <br> -->
-<!--   <input type="text" name="email" size="50"><br> -->
-<!--   Comment: <br> -->
-<!--   <textarea rows="5" cols="50" name="body"></textarea><br> -->
-<!--   <input type="hidden" name="slug" value="{{ post.slug }}"> -->
-<!--   <input type="submit" value="POST" id="submit"> -->
-<!-- </form> -->
+<form method=post action="/post-comment" class="form-horizontal">
+    <legend>Post a Comment</legend>
+  <div class="control-group"><label for="name" class="control-label">Name</label>
+  <div class="controls"><input id="name" name="name" type="text"
+  placeholder="Name">
+  </div></div>
+  <div class="control-group"><label for="email" class="control-label">Email</label>
+  <div class="controls"><input id="email" name="email" type="text"
+  placeholder="Email">
+  </div></div>
 
-{% from "_formhelpers.html" import render_field %}
-<form method=post action="/post-comment">
-  <dl>
-    {{ render_field(form.name) }}
-    {{ render_field(form.email) }}
-    {{ render_field(form.comment, rows="10", cols="50") }}
-    {{ render_field(form.slug, value=post.slug) }}
+    
+  <div class="control-group">
+    <label for="comment" class="control-label">Comment</label>
+  <div class="controls"><textarea id="comment"
+  name="comment" rows="5" class="input-xxlarge">
+  </textarea></div></div>
+
+    
+  <div class="control-group">
+  <div class="controls">
+    <input id="slug" name="slug" type="hidden"
+           value="markdown-trials">
+        <button type='submit' class="btn btn-info btn-large">Comment</button>
+  </div></div>
+
   
-  <dd><input type=submit value='Comment' id="submit"></dd>
-  </dl>
 </form>
 
 <br><br>
