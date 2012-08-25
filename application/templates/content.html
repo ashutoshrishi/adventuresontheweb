@@ -10,7 +10,7 @@
 <div class="page-header">
 <h1><a href="/posts/{{ post.slug }}">{{ post.title }}</a>
 <small>posted on {{ post.date.__str__() }}</small></h1>
-<span class="label">Comments: 10</span>
+<span class="label">Comments: {{ post.comment_count }}</span>
 <span class="label">
 <a href="https://twitter.com/share?url=http%3A%2F%2Fadventures.ashutoshrishiranjan.com%2Fposts%2F{{
                             post.slug }}&via=ashutoshrishi&text={{

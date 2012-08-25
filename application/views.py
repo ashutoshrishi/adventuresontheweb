@@ -22,7 +22,8 @@ def show_index():
     Rendering the front page, show all posts from articles dir.
     """
     flash("Welcome!")
-    return render_template("content.html", posts = ARTICLES)
+    articles = add_comment_count()
+    return render_template("content.html", posts = articles)
 
 
 @app.route('/posts/<slug>', methods=['GET'])
@@ -117,6 +118,14 @@ def post_comment():
     flash('DID NOT WORK')
     return redirect(url_for('show_index'))
     
-
-
+def add_comment_count():
+    articles = []
+    q = Comment.all()
+    for article in ARTICLES:
+        a = q;
+        a.filter("slug =", article['slug'])
+        comments = a.fetch(1000)
+        article['comment_count'] = len(comments)
+        articles.append(article)
+    return articles
     
